@@ -13,7 +13,7 @@ angular.module('openWeatherApp.services', ['ngResource'])
   //
   // Define a standard list of "example locations"
   //
-  .value('exampleLocations',['Hamburg','Berlin','Tokyo','New York','Moscow','Clonakilty'])
+  .value('exampleLocations',['Lyon','Paris','Sacramento','New York','Moscow','Clonakilty'])
   //
   // Storm "Xaver" special locations
   //
@@ -37,7 +37,7 @@ angular.module('openWeatherApp.services', ['ngResource'])
     var apiKey = '279b4be6d54c8bf6ea9b12275a567156';
     var apiBaseUrl = 'http://api.openweathermap.org/data/2.5/';
 
-    return $resource(apiBaseUrl + ':path/:subPath?q=:location',
+    return $resource(apiBaseUrl + ':path?q=:location',
       {
 //        APPID: apiKey,
         mode: 'jsonp',
