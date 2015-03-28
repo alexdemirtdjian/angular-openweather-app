@@ -6,15 +6,14 @@ angular.module('openWeatherApp.controllers', [])
 
   // Controller for "open weather map" api data search
   .controller('OpenWeatherCtrl',
-    ['$scope','openWeatherMap','exampleLocations','stormLocations','ISO3166',
-      function($scope,openWeatherMap,exampleLocations,stormLocations,ISO3166) {
+    ['$scope','openWeatherMap','exampleLocations','ISO3166',
+      function($scope,openWeatherMap,exampleLocations,ISO3166) {
 
     $scope.message = '';
     $scope.hasState = '';
 
     // Expose example locations to $scope
     $scope.exampleLocations = exampleLocations;
-    $scope.stormLocations = stormLocations;
     $scope.iconBaseUrl = 'http://openweathermap.org/img/w/';
 
     // On initialization load data for first example entry

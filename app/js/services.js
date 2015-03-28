@@ -3,6 +3,8 @@
 /* Services */
 
 angular.module('openWeatherApp.services', ['ngResource'])
+// Le module ngRessource permet l'integration à l'API REST via le service $resource
+// Utilisé pour le factory plus bas
 
   //
   // Simple value service (kept from angular-seed dist)
@@ -39,7 +41,6 @@ angular.module('openWeatherApp.services', ['ngResource'])
 
     return $resource(apiBaseUrl + ':path?q=:location',
       {
-//        APPID: apiKey,
         mode: 'jsonp',
         callback: 'JSON_CALLBACK',
         units: 'metric',
