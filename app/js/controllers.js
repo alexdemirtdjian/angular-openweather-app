@@ -2,26 +2,33 @@
 
 /* Controllers */
 
-angular.module('openWeatherApp.controllers', [])
+angular.module('openWeatherApp.controllers', ['ngAutocomplete'])
 
   // Controller for "open weather map" api data search
   .controller('OpenWeatherCtrl',
     ['$scope','openWeatherMap','exampleLocations','ISO3166',
       function($scope,openWeatherMap,exampleLocations,ISO3166) {
 
+
     $scope.message = '';
     $scope.hasState = '';
 
     // Expose example locations to $scope
+    // On commence avec des villes en exemple
     $scope.exampleLocations = exampleLocations;
     $scope.iconBaseUrl = 'http://openweathermap.org/img/w/';
 
-    // On initialization load data for first example entry
+    // Set location à une ville exemple
+    $scope.location =  exampleLocations[ 0 ];
+
+    // initialization load data for first example entry
+    // forecast : json de l'API openweathermap
     $scope.forecast = openWeatherMap.queryForecastDaily({
       location: exampleLocations[ 0 ]
     });
 
     // Get forecast data for location as given in $scope.location
+    // definit le forecast à partir de la location
     $scope.getForecastByLocation = function() {
 
       if ($scope.location == '' || $scope.location == undefined) {
@@ -38,6 +45,7 @@ angular.module('openWeatherApp.controllers', [])
     };
 
     // Set $scope.location and execute search on API
+    // Definit location et forecast
     $scope.setLocation = function(loc) {
       $scope.location = loc;
       $scope.getForecastByLocation();

@@ -10,9 +10,12 @@
                         <!-- liste de villes exemples -->
                         <span class="form-group {{hasState}}">
                             <label class="sr-only" for="location">City</label>
-                            <input ng-model="location" type="text" class="form-control" id="location" placeholder="City">
+                            <input ng-model="location" type="text" class="form-control" id="location"
+                            ng-autocomplete="location" placeholder="City">
                         </span>
-                        <!-- recherche d'une ville -->
+                        <!-- recherche d'une ville : l'ajout de ng-automcomplete fait le lien avec
+                        l'injection de dépendance lors de la definition du controlleur principale
+                        qui fait appel à lib/autocomplete/ngAutomplete. On defnit aisi location -->
                         <button ng-click="setLocation(location)" type="submit" class="btn btn-primary">Search!</button>
                         <!-- Au clique : recuperation de la ville -->
                         <span ng-show="message" class="alert"><span class="glyphicon glyphicon-arrow-left">&nbsp;</span>{{message}}</span>
@@ -20,8 +23,10 @@
                 </div>
             </div>
         </div>
+
         <p>{{exampleLocations}}</p>
         <p>{{location}}</p>
+
     </div>
     <div class="weather-data" ng-show="true">
         <div class="row">
