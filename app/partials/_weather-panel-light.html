@@ -1,7 +1,6 @@
-<div class="weather panel ">
-  <div></div>
+<div class="weather panel">
 
-    <div class="panel-heading">{{parseDate(useDayForecast.dt) | date:'EEEE d - H'}} H</div>
+    <div class="panel-heading {{useDayForecast.main.temp | colorTemp}}">{{parseDate(useDayForecast.dt) | date:'EEEE d - H'}} H</div>
     <div class="panel-body">
         <div>
             <p class="lead">

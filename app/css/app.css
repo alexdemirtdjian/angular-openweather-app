@@ -17,3 +17,26 @@ body {
 .weather.panel .panel-footer {
     font-weight: lighter !important;
 }
+
+/* Background color des temperatures */
+.bleu-clair {
+  background-color: red;
+}
+.vert {
+  background-color: blue;
+}
+.jaune {
+  background-color: yellow;
+}
+.orange {
+  background-color: orange;
+}
+.orange-fonce {
+  background-color: blue;
+}
+.rouge {
+  background-color: red;
+}
+.rouge-fonce {
+  background-color: red;
+}
