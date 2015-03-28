@@ -3,6 +3,7 @@
 /* Controllers */
 
 angular.module('openWeatherApp.controllers', ['ngAutocomplete'])
+  // ngAutocomplete est la pour la proposition de ville dans la barre de recherche
 
   // Controller for "open weather map" api data search
   .controller('OpenWeatherCtrl',
@@ -18,8 +19,6 @@ angular.module('openWeatherApp.controllers', ['ngAutocomplete'])
     $scope.exampleLocations = exampleLocations;
     $scope.iconBaseUrl = 'http://openweathermap.org/img/w/';
 
-    // Set location à une ville exemple
-    $scope.location =  exampleLocations[ 0 ];
 
     // initialization load data for first example entry
     // forecast : json de l'API openweathermap
