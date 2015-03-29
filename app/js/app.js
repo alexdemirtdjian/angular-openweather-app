@@ -13,6 +13,7 @@ var openWeatherApp = angular.module('openWeatherApp',[
 // Configuration des routes
 openWeatherApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/forecast', {templateUrl: 'partials/forecast.html', controller: 'OpenWeatherCtrl'});
-  $routeProvider.when('/storm', {templateUrl: 'partials/storm.html', controller: 'OpenWeatherCtrl'});
+  $routeProvider.when('/login', {templateUrl: 'partials/login.php', controller: 'UserCtrl'});
+  $routeProvider.when('/signup', {templateUrl: 'partials/signup.php', controller: 'UserCtrl'});
   $routeProvider.otherwise({redirectTo: '/forecast'});
 }]);
