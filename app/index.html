@@ -9,13 +9,24 @@
         <link rel="stylesheet" href="css/signin.css" >
     </head>
     <body>
-        <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
-            <div class="collapse navbar-collapse navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <li class=""><a href="#/login">Login</a></li>
-                    <li class=""><a href="#/signup">Sign up</span></a></li>
-                </ul>
+      <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+        <div class="container-fluid">
+        <!-- Bouton principal : page d'accueil -->
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                 <span class="sr-only">Toggle navigation</span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+                 <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="#">Home</a>
             </div>
+            <!-- Login et sign up à droite -->
+            <ul class="nav navbar-nav navbar-right left">
+              <li class=""><a href="#/login">Login</a></li>
+              <li class=""><a href="#/signup">Sign up</span></a></li>
+            </ul>
+          </div>
         </nav>
         <div class="container">
             <div ng-view></div>
