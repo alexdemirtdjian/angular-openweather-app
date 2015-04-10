@@ -5,3 +5,4 @@ dist-src
 data
 .idea
 .DS_Store
+composer.phar

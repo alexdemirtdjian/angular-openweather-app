@@ -80,6 +80,11 @@ for desktop and mobile use?
 * Improve UI/UX by integrating a fancy design, transitions, effects
 
 
+## Installation
+
+* install dependencies with "composer require slim/slim"
+
+
 ## License
 
 [The MIT License](http://opensource.org/licenses/MIT)
