@@ -25,8 +25,8 @@
         </div>
 
         <p>{{exampleLocations}}</p>
-        <p>{{forecast.list[0].main.temp | colorTemp}}</p>
-        <p>{{forecast.list.length}}</p>
+        <p>{{location}}</p>
+
 
     </div>
     <div class="weather-data" ng-show="true">
@@ -35,8 +35,7 @@
                 <div class="text-center">
                     <h3>
                         {{forecast.city.name | placeholder:'?'}}, {{forecast.city.country | isoCountry}}
-                        <small>Longitude: {{forecast.city.coord.lon | number:2}}
-                          Latitude: {{forecast.city.coord.lat | number:2}} </small>
+                        <small>Longitude: {{forecast.city.coord.lon | number:2}} Latitude: {{forecast.city.coord.lat | number:2}} </small>
                     </h3>
                 </div>
             </div>
